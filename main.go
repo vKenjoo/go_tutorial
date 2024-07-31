@@ -6,7 +6,8 @@ func main()  {
 	var intNum int // since it was not defined, it is always equal to 0
 	fmt.Println(intNum)
 
-	/* the key word int automatically sets it to either int32/int64 
+	/* Ints
+	the key word int automatically sets it to either int32/int64 
 	(depende ong your architecture)
 	Signed Bits
 	int8 = 1 byte with a range of [-128 | 127]
@@ -25,4 +26,28 @@ func main()  {
 	var floatNum2 float64 = 12345678.9
 	fmt.Println("here is float32: ", floatNum1)
 	fmt.Println("here is float64: ", floatNum2)
+
+	/* Floats
+	float32 is single precision floating point
+	float64 is double precision floating point
+
+	float64 collects more memory than float32 but is more precise
+	Always consider the purpose and range of the value you are using
+	*/
+
+	/* SUMMARY OF INTS AND FLOATS
+		it is always best to considere where you will be using your value.
+		for example, if you would be using x in the an rgb code 
+		Ex: rgb(x, 255, 130)
+		
+		You might probably consider using int16 for this. And that is by no means wrong
+		but there is a more better approach to it by using uint8
+		
+		uint8 = 1 byte 
+		int16 = 2 bytes.
+
+		that is one byte saved had you thought about it a litte more efficient
+		TLDR: BE MINDFUL OF WHAT YOU USE AND WHERE YOU'll BE USING IT <3
+	*/
+
 }
