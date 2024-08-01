@@ -49,5 +49,8 @@ func main()  {
 		that is one byte saved had you thought about it a litte more efficient
 		TLDR: BE MINDFUL OF WHAT YOU USE AND WHERE YOU'll BE USING IT <3
 	*/
+	
+	// hello!
 
+	fmt.Println("test")
 }
