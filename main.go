@@ -2,6 +2,20 @@ package main
 
 import "fmt"
 
+func MoveLastToFirst(arr []int) []int {
+    if len(arr) == 0 {
+        return arr
+    }
+    
+    // Get the last element
+    lastElement := arr[len(arr)-1]
+    
+    // Create a new slice with the last element at the beginning
+    newArr := append([]int{lastElement}, arr[:len(arr)-1]...)
+    
+    return newArr
+}
+
 func main()  {
 	var intNum int // since it was not defined, it is always equal to 0
 	fmt.Println(intNum)
@@ -55,4 +69,9 @@ func main()  {
 	for i := 1; i <= 10; i++ {
         fmt.Println(i)
     }
+
+	arr := []int{1, 2, 3, 4, 5}
+    fmt.Println("Original array:", arr)
+    arr = MoveLastToFirst(arr)
+    fmt.Println("Modified array:", arr)
 }
