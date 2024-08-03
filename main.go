@@ -7,13 +7,26 @@ func MoveLastToFirst(arr []int) []int {
         return arr
     }
     
-    // Get the last element
+
     lastElement := arr[len(arr)-1]
     
     // Create a new slice with the last element at the beginning
     newArr := append([]int{lastElement}, arr[:len(arr)-1]...)
     
     return newArr
+}
+
+unc FindMiddle(arr []int) int {
+    length := len(arr)
+    if length == 0 {
+        panic("Array is empty")
+    }
+
+    middleIndex := length / 2
+
+    // If the length is odd, return the middle element
+    // If the length is even, return the first of the two middle elements
+    return arr[middleIndex]
 }
 
 func main()  {
@@ -63,12 +76,6 @@ func main()  {
 		that is one byte saved had you thought about it a litte more efficient
 		TLDR: BE MINDFUL OF WHAT YOU USE AND WHERE YOU'll BE USING IT <3
 	*/
-	
-	// hello!
-
-	for i := 1; i <= 10; i++ {
-        fmt.Println(i)
-    }
 
 	arr := []int{1, 2, 3, 4, 5}
     fmt.Println("Original array:", arr)
