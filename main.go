@@ -2,37 +2,7 @@ package main
 
 import "fmt"
 
-func MoveLastToFirst(arr []int) []int {
-    if len(arr) == 0 {
-        return arr
-    }
-    
-
-    lastElement := arr[len(arr)-1]
-    
-    // Create a new slice with the last element at the beginning
-    newArr := append([]int{lastElement}, arr[:len(arr)-1]...)
-    
-    return newArr
-}
-
-unc FindMiddle(arr []int) int {
-    length := len(arr)
-    if length == 0 {
-        panic("Array is empty")
-    }
-
-    middleIndex := length / 2
-
-    // If the length is odd, return the middle element
-    // If the length is even, return the first of the two middle elements
-    return arr[middleIndex]
-}
-
 func main()  {
-	var intNum int // since it was not defined, it is always equal to 0
-	fmt.Println(intNum)
-
 	/* Ints
 	the key word int automatically sets it to either int32/int64 
 	(depende ong your architecture)
@@ -48,11 +18,9 @@ func main()  {
 	uint32 = 3 bytes with a range of [0 | 4,294,967,295]
 	uint64 = 4 bytes with a range of [0 | 18,446,744,073,709,551,615]
 	*/
+	var intNum int // since it was not defined, it is always equal to 0
+	fmt.Println(intNum)
 
-	var floatNum1 float32 = 12345678.9
-	var floatNum2 float64 = 12345678.9
-	fmt.Println("here is float32: ", floatNum1)
-	fmt.Println("here is float64: ", floatNum2)
 
 	/* Floats
 	float32 is single precision floating point
@@ -61,6 +29,21 @@ func main()  {
 	float64 collects more memory than float32 but is more precise
 	Always consider the purpose and range of the value you are using
 	*/
+	var floatNum1 float32 = 12345678.9
+	var floatNum2 float64 = 12345678.9
+	fmt.Println("here is float32: ", floatNum1)
+	fmt.Println("here is float64: ", floatNum2)
+
+	//var floatError2 float64 = floatNum1 + floatNum2
+	/* invalid operation: floatNum1 + floatNum2 \
+	(mismatched types float32 and float64)compilerMismatchedTypes
+	*/
+
+	// and you cant add mixed types DIRECTLY 
+	// you need to type cast
+	var floatError1 int = int(floatNum1) + int(floatNum2)
+	fmt.Println(floatError1)
+
 
 	/* SUMMARY OF INTS AND FLOATS
 		it is always best to considere where you will be using your value.
@@ -77,8 +60,5 @@ func main()  {
 		TLDR: BE MINDFUL OF WHAT YOU USE AND WHERE YOU'll BE USING IT <3
 	*/
 
-	arr := []int{1, 2, 3, 4, 5}
-    fmt.Println("Original array:", arr)
-    arr = MoveLastToFirst(arr)
-    fmt.Println("Modified array:", arr)
+
 }
