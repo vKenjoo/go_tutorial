@@ -44,6 +44,10 @@ func main()  {
 	var floatError1 int = int(floatNum1) + int(floatNum2)
 	fmt.Println(floatError1)
 
+	var intNum1 int = 3
+	var intNum2 int = 2
+	fmt.Println(intNum1/intNum2) // output = 1
+	fmt.Println(intNum1%intNum2) // output = 1.5
 
 	/* SUMMARY OF INTS AND FLOATS
 		it is always best to considere where you will be using your value.
@@ -60,5 +64,9 @@ func main()  {
 		TLDR: BE MINDFUL OF WHAT YOU USE AND WHERE YOU'll BE USING IT <3
 	*/
 
+	// Strings
+	var myString1 string = "hello world"
+	var myString2 string = `hello world (in backticks)`
+	fmt.Println(myString1 + "\n" + myString2)
 
 }
