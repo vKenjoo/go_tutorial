@@ -66,7 +66,6 @@ func main()  {
 
 	// Strings
 	var myString1 string = "hello world"
-	var myString2 string = `hello world (in backticks)`
+	var myString2 string = `hello world (in backticks)` //backticks DIRECTLY format strings
 	fmt.Println(myString1 + "\n" + myString2)
-
 }
